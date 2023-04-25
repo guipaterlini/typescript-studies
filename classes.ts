@@ -24,3 +24,29 @@ const data = new Data(1, 1, 2020);
 console.log(data.dia);
 
 const data2 = new Data(1, 1); // Ele aceita somente dois parametros porque está pegando o valor default 1970 colocado no constructor
+
+class Carro {
+  private velocidadeAtual: number = 0;
+
+  constructor(
+    public marca: string,
+    public modelo: string,
+    private velocidadeMaxima: number = 220
+  ) {}
+
+  private alterarVelocidade(delta: number) {
+    // FACO AS VALIDAÇÕES DE ACELERACAO E FRENAGEM
+    // this.velocidadeAtual = XXX
+  }
+
+  acelerar() {
+    this.alterarVelocidade(5);
+  }
+
+  frear() {
+    this.alterarVelocidade(-5);
+  }
+}
+
+const carro = new Carro("Chevrolet", "Onix", 160);
+carro.acelerar();
