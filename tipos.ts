@@ -104,3 +104,16 @@ function tratarFuncionarios(funcionarios: Funcionario[]) {
     console.log("Nome do funcionario: ", funcionario.nome);
   }
 }
+
+let altura: number | null = 1.6;
+altura = null;
+
+type Contato = {
+  nome: string;
+  telefone1: string;
+  telefone2?: string; // usando o '?' faz com que esse campo possa ser opcional, undefined, seria o mesmo que colocar: string | undefined
+};
+const contato: Contato = {
+  nome: "Diana",
+  telefone1: "10232924030",
+};
