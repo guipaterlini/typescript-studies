@@ -77,3 +77,30 @@ function exibirNota(nota: number | string) {
 
 exibirNota("10");
 exibirNota(10);
+
+// Alias - voce cria um tipo de typescript, no exemplo foi criado o tipo funcionario
+type Funcionario = {
+  nome: string;
+  sobrenome: string;
+  dataNascimento: Date;
+};
+
+// type Funcionarios = Array<Funcionario>;
+const funcionarios: Funcionario[] = [
+  {
+    nome: "Vitor",
+    sobrenome: "Farias",
+    dataNascimento: new Date(),
+  },
+  {
+    nome: "Guilherme",
+    sobrenome: "Paterlini",
+    dataNascimento: new Date(),
+  },
+];
+
+function tratarFuncionarios(funcionarios: Funcionario[]) {
+  for (let funcionario of funcionarios) {
+    console.log("Nome do funcionario: ", funcionario.nome);
+  }
+}
