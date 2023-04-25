@@ -54,5 +54,17 @@ function criar(objeto: object) {
 criar({
   propriedade: 1,
 });
-
 // criar('Guilherme') // Dá erro porque não é um object e sim uma string
+
+// Never - quase nunca se vê nos projetos, mas as vezes o typescript irá inferir para uma funcção sem retorno, tipo um while infinito
+function loopInfinito(): never {
+  while (true) {}
+}
+
+function erro(mensagem: string): never {
+  throw new Error(mensagem);
+}
+
+function falha() {
+  return erro("Algo falhou");
+}
