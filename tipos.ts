@@ -68,3 +68,12 @@ function erro(mensagem: string): never {
 function falha() {
   return erro("Algo falhou");
 }
+
+// Union Types - para quando uma função aceita mais um de tipo
+const nota: string | number = 5;
+function exibirNota(nota: number | string) {
+  console.log(`A nota é ${nota}`);
+}
+
+exibirNota("10");
+exibirNota(10);
