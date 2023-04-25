@@ -117,3 +117,12 @@ const contato: Contato = {
   nome: "Diana",
   telefone1: "10232924030",
 };
+
+// Type Assertion
+const minhaIdade: any = 23;
+(minhaIdade as number).toString();
+
+const input = document.getElementById("numero1") as HTMLInputElement; // Nesse exemplo foi utilizado para deixar claro para o typescript 
+// que o elemento possui de fato uma propriedade tpo .value
+// outra notação: const input = <HTMLInputElement>document.getElementById("numero1");
+console.log(input.value);
